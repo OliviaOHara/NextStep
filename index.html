@@ -1,18 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF=8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NextStep Task Tracker</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>NextStep</h1>
-  <h2>Every goal starts with your NextStep </h2>
-  <input type="file">
-  
+  <header>
+    <h1>NextStep</h1>
+    <h2>Every goal starts with your NextStep </h2>
+  </header>
+
+  <!-- Calendar Section -->
+  <section class="calendar">
+    <div class="calendar-header">
+      <button id="prevMonth">←</button>
+      <h3 id="monthName">May</h3>
+      <button id="nextMonth">→</button>
+    </div>
+    <div class="calendar-grid">
+      <!-- JS will populate calendar dates here -->
+    </div>
+  </section>
+
+  <!-- Task Modal -->
+  <div id="taskModal" class="modal hidden">
+    <h3>Add a Task</h3>
+    <form>
+      <input type="text" placeholder="Task name">
+      <input type="date">
+      <button type="submit">Add</button>
+    </form>
+  </div>
+
+  <!-- Notes Modal -->
+  <div id="notesModal" class="modal hidden">
+    <h3>Add Notes</h3>
+    <textarea placeholder="Write your notes here..."></textarea>
+    <button>Save</button>
+  </div>
+
+  <!-- Pomodoro Timer -->
+  <section class="pomodoro">
+    <h3>Pomodoro Timer</h3>
+    <p id="timer">30:00</p>
+    <button id="startTimer">▶️</button>
+  </section>
+
+  <!-- Motivation Quote -->
+  <section class="quote-box">
+    <p id="quote">"You’ve got this!"</p>
+  </section>
+
+  <!-- Action Buttons -->
+  <div class="action-buttons">
+    <button id="openTaskModal">+ add task</button>
+    <button id="openNotesModal">📝 add notes</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-  </head>
